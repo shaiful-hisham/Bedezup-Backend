@@ -1,0 +1,2 @@
+serviceClass: com.tams.bedezup.client.SecurityService
+path: E8491C1C96D988D9DBA921E402BCA0E2.gwt.rpc

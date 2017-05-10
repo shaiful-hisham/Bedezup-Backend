@@ -1,0 +1,41 @@
+<module rename-to="app">
+	
+	<inherits name="com.google.gwt.user.User"/>
+	<!-- GWT theme
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+	-->
+	
+	<!-- GXT theme inherits -->
+	<inherits name='com.sencha.gxt.theme.blue.Blue' />
+	
+	<!-- GXT style sheet -->
+	<stylesheet src="reset.css" />
+	
+	<!-- GXT theme inherits -->
+	<!-- <inherits name='com.sencha.gxt.theme.blue.Blue' /> -->
+	<!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
+	<inherits name='com.sencha.gxt.theme.neptune.Theme' />
+	
+	<!-- GXT module inherits -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	
+	<!-- For development (support Mozilla only)-->
+	<set-property name="gxt.user.agent" value="gecko1_9" /> 
+	 
+	<!-- Other module inherits -->
+	<replace-with class="com.sencha.gxt.core.client.dom.Mask.MaskDefaultAppearance">
+    	<when-type-is class="com.sencha.gxt.core.client.dom.Mask.MaskAppearance" />
+  	</replace-with>
+	 
+	<!-- Specify the paths for translatable code -->
+  	<source path="client" />
+  	<source path="shared" />
+  	<source path="domain" />
+  	
+  	<!-- GZip / Compress the output files by default -->
+  	<inherits name='com.google.gwt.precompress.Precompress' />
+	
+	<entry-point class="com.tams.bedezup.client.App"/>
+	
+</module>
