@@ -42,6 +42,7 @@ public class SystemUser implements Serializable {
 	@ManyToOne
 	private SystemUserType userType;
 	
+	// Add comment here
 	
 	
 }
