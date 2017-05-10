@@ -45,6 +45,7 @@ public class SecurityController {
 		}
 		catch (Exception e) {
 			response = new ResponseEntity<String>(headers, HttpStatus.FORBIDDEN);
+			logger.error(e);
 		}
 		
 		// Passed authorization
