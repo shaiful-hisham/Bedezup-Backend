@@ -16,11 +16,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import lombok.Data;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.tams.bedezup.domain.lookup.JobStatus;
+
+import lombok.Data;
 
 @Data
 @Entity
@@ -52,4 +52,9 @@ public class Job implements Serializable {
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "job")
 	private List<Good> goodList;
+	
+	// Adding organisation
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Organisation organisation;
+	
 }

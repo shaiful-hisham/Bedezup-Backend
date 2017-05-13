@@ -41,4 +41,8 @@ public class SystemUser implements Serializable {
 	
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "systemUser")
 	private Profile profile;
+	
+	// Adding organisation
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Organisation organisation;
 }
