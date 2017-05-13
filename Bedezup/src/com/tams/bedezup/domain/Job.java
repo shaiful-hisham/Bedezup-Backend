@@ -51,5 +51,5 @@ public class Job implements Serializable {
 	private BigDecimal jobPrice;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "job")
-	private List <Good> goodList;
+	private List<Good> goodList;
 }

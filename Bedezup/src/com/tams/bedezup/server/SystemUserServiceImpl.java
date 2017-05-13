@@ -44,4 +44,14 @@ public class SystemUserServiceImpl extends RemoteServiceServlet implements Syste
 	public SystemUser findSystemUserByUserNameAndPasswordEqual(String userName, String password) {
 		return systemUserDAO.findSystemUserByUserNameAndPasswordEqual(userName, password);
 	}
+	
+	@Override
+	public SystemUser findSystemUserByEmailEquals(String email) {
+		return systemUserDAO.findSystemUserByEmailEquals(email);
+	}
+
+	@Override
+	public SystemUser findSystemUserByUserNameEquals(String userName) {
+		return systemUserDAO.findSystemUserByUserNameEquals(userName);
+	}
 }

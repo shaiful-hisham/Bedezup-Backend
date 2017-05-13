@@ -36,13 +36,9 @@ public class SystemUser implements Serializable {
 	@Column(name = "status")
 	private String status;
 
+	@ManyToOne(fetch = FetchType.EAGER)
+	private SystemUserType systemUserType;
+	
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "systemUser")
 	private Profile profile;
-	
-	@ManyToOne
-	private SystemUserType userType;
-	
-	// Add comment here
-	
-	
 }

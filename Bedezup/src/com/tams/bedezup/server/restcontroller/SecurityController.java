@@ -73,6 +73,7 @@ public class SecurityController {
 		UserState userState = (UserState) session.getAttribute(UserState.USER_STATE);
 		
 		if (userState != null) {
+			logger.debug("Logout user id: " + userState.getStateObject(UserState.SYSTEM_USER_ID));
 			session.removeAttribute(UserState.USER_STATE);
 		}
 		

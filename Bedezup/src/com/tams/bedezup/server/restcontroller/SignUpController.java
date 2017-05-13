@@ -79,6 +79,6 @@ public class SignUpController {
 			response = new ResponseEntity<String>(headers, HttpStatus.UNPROCESSABLE_ENTITY);
 		}
 		
-		return response;
+		return (response == null ? new ResponseEntity<String>(headers, HttpStatus.OK) : response);
 	}
 }
